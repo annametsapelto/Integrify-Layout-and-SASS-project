@@ -4,6 +4,7 @@
   "description": "Project for studying layouts, animations and SASS",
   "main": "index.js",
   "scripts": {
+    "compile": "sass --watch src/styles/styles.scss:src/compiledStyles/styles.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
