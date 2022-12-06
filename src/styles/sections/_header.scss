@@ -64,6 +64,9 @@
 .main-header__nav a {
     text-decoration: none;
     color: white;
+    &:hover {
+        color:aqua;
+    }
 }
 
 .main-header__search-icon img {

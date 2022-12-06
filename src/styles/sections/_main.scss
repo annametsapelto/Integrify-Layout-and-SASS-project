@@ -1,49 +1,65 @@
-.main {
+@import '../features/features.scss';
+
+main {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'aside content content content content content content .';
 }
 
 .main__aside {
     color: white;
     transform: rotate(-90deg);
-    float: left;
-    display: grid;
     grid-column: 1/2;
+    grid-area: aside;
+    position: fixed;
+    left: -5em;
+    margin-top: 10em;
 }
 
 .main__pinned {
-    grid-column: 2/7;
-
+    grid-area: content;
+    color: white;
+    margin-bottom: 3em;
 }
 
 .main__pinned2 {
     display: grid;
+    grid-gap: 1em;
     grid-template-areas: 
     'medium1 medium1 medium1 small1 small1 small2 small2'
     'medium1 medium1 medium1 small3 small3 small4 small4'; 
 }
 
-.main__pinned__picture--medium {
+.main__pinned__pic--medium {
+    @extend .picture-frame;
     grid-area: medium1;
     background-color: antiquewhite;
 }
 
-.main__pinned__picture--small1 {
+.main__pinned__pic--small1 {
+    @extend .picture-frame-small;
     grid-area: small1;
     background-color: blue;
 }
 
-.main__pinned__picture--small2 {
+.main__pinned__pic--small2 {
+    @extend .picture-frame-small;
     grid-area: small2;
     background-color: yellow;
 }
 
-.main__pinned__picture--small3 {
+.main__pinned__pic--small3 {
+    @extend .picture-frame-small;
     grid-area: small3;
     background-color: purple;
 }
 
-.main__pinned__picture--small4 {
+.main__pinned__pic--small4 {
+    @extend .picture-frame-small;
     grid-area: small4;
     background-color: pink;
+}
+
+.main__pinned button {
+    @extend .feature-button-light;
+    margin: 1em;
 }
