@@ -82,7 +82,6 @@
 
 .picture-frame, .main__pinned__pic--medium {
   border-radius: 10px;
-  display: table;
   padding: 1em;
 }
 .picture-frame:hover, .main__pinned__pic--medium:hover {
@@ -91,11 +90,19 @@
 
 .picture-frame-large, .main__large-pictures__pic3, .main__large-pictures__pic2, .main__large-pictures__pic1 {
   border-radius: 10px;
-  display: table;
   padding: 1em;
   height: 13em;
 }
 .picture-frame-large:hover, .main__large-pictures__pic3:hover, .main__large-pictures__pic2:hover, .main__large-pictures__pic1:hover {
+  transform: translateY(-3px);
+}
+
+.picture-frame-article, .main__articles__article5, .main__articles__article4, .main__articles__article3, .main__articles__article2, .main__articles__article1 {
+  border-radius: 10px;
+  height: 13em;
+  padding: 1em;
+}
+.picture-frame-article:hover, .main__articles__article5:hover, .main__articles__article4:hover, .main__articles__article3:hover, .main__articles__article2:hover, .main__articles__article1:hover {
   transform: translateY(-3px);
 }
 
@@ -135,7 +142,7 @@
   color: white;
 }
 
-.feature-button-light-filled, .main__large-pictures__pic3 button, .main__large-pictures__pic2 button, .main__large-pictures__pic1 button {
+.feature-button-light-filled, .main__articles__article5 button, .main__articles__article4 button, .main__articles__article3 button, .main__articles__article2 button, .main__articles__article1 button, .main__large-pictures__pic3 button, .main__large-pictures__pic2 button, .main__large-pictures__pic1 button {
   height: 1.6em;
   border-radius: 15px;
   border-color: white;
@@ -144,8 +151,9 @@
   padding-bottom: 2px;
   padding-left: 5px;
   padding-right: 5px;
+  margin: 0.3em;
 }
-.feature-button-light-filled:hover, .main__large-pictures__pic3 button:hover, .main__large-pictures__pic2 button:hover, .main__large-pictures__pic1 button:hover {
+.feature-button-light-filled:hover, .main__articles__article5 button:hover, .main__articles__article4 button:hover, .main__articles__article3 button:hover, .main__articles__article2 button:hover, .main__articles__article1 button:hover, .main__large-pictures__pic3 button:hover, .main__large-pictures__pic2 button:hover, .main__large-pictures__pic1 button:hover {
   background-color: white;
   color: black;
 }
@@ -198,7 +206,7 @@ main {
 
 .main__pinned__pic--medium {
   grid-area: medium1;
-  background-color: antiquewhite;
+  background-color: rgb(124, 96, 58);
 }
 
 .main__pinned__pic--small1 {
@@ -281,10 +289,50 @@ main {
 }
 
 .main__articles {
+  margin-left: 9em;
+  margin-right: 9em;
   display: grid;
+  grid-gap: 1em;
+  grid-template-areas: "art1 art1 art1 art2 art2 art2" "art3 art3 art4 art4 art5 art5" "load-button load-button load-button load-button load-button load-button";
 }
 
+.main__articles__article1 {
+  grid-area: art1;
+  background-image: url("../images/leaves.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+.main__articles__article2 {
+  grid-area: art2;
+  background-image: url("../images/leaves.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+.main__articles__article3 {
+  grid-area: art3;
+  background-image: url("../images/leaves.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+.main__articles__article4 {
+  grid-area: art4;
+  background-image: url("../images/leaves.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+.main__articles__article5 {
+  grid-area: art5;
+  background-image: url("../images/leaves.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
 .main__articles__load-button {
+  grid-area: load-button;
   justify-self: center;
   width: 50%;
   background-color: rgb(41, 40, 40);

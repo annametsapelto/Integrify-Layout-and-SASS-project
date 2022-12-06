@@ -36,7 +36,7 @@ main {
 .main__pinned__pic--medium {
     @extend .picture-frame;
     grid-area: medium1;
-    background-color: antiquewhite;
+    background-color: rgb(124, 96, 58);
 }
 
 .main__pinned__pic--small1 {
@@ -130,10 +130,76 @@ main {
 }
 
 .main__articles {
+    margin-left: 9em;
+    margin-right: 9em;
     display: grid;
+    grid-gap: 1em;
+    grid-template-areas: 'art1 art1 art1 art2 art2 art2'
+    'art3 art3 art4 art4 art5 art5'
+    'load-button load-button load-button load-button load-button load-button';
+}
+
+.main__articles__article1 {
+    @extend .picture-frame-article;
+    grid-area: art1;
+    background-image: url("../images/leaves.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    button {
+        @extend .feature-button-light-filled;
+    }
+}
+.main__articles__article2 {
+    @extend .picture-frame-article;
+    grid-area: art2;
+    background-image: url("../images/leaves.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    button {
+        @extend .feature-button-light-filled;
+    }
+}
+
+.main__articles__article3 {
+    @extend .picture-frame-article;
+    grid-area: art3;
+    background-image: url("../images/leaves.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    button {
+        @extend .feature-button-light-filled;
+    }
+}
+
+.main__articles__article4 {
+    @extend .picture-frame-article;
+    grid-area: art4;
+    background-image: url("../images/leaves.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    button {
+        @extend .feature-button-light-filled;
+    }
+}
+
+.main__articles__article5 {
+    @extend .picture-frame-article;
+    grid-area: art5;
+    background-image: url("../images/leaves.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    button {
+        @extend .feature-button-light-filled;
+    }
 }
 
 .main__articles__load-button {
+    grid-area: load-button;
     justify-self: center;
     width: 50%;
     background-color: rgb(41, 40, 40);
