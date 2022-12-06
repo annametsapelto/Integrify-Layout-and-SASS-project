@@ -5,6 +5,12 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.sticky-header--gatherer {
+  position: fixed;
+  width: 100%;
+  margin-bottom: 3em;
+}
+
 .sticky-header {
   background-color: rgb(29, 28, 28);
   height: 2.5em;
@@ -42,12 +48,23 @@
   background-color: black;
 }
 
+.main-header {
+  margin-bottom: 2em;
+  height: 3em;
+  padding-top: 4em;
+  display: grid;
+  grid-template-areas: ". headline . nav-line nav-line nav-line nav-line .";
+}
+
 .main-header__headline {
   color: white;
+  margin-left: 10em;
+  grid-area: headline;
+  align-content: center;
 }
 
 .main-header__nav-line {
-  float: right;
+  grid-area: nav-line;
 }
 
 .main-header__nav a {
@@ -58,6 +75,53 @@
 .main-header__search-icon img {
   height: 1em;
   float: right;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.main__aside {
+  color: white;
+  transform: rotate(-90deg);
+  float: left;
+  display: grid;
+  grid-column: 1/2;
+}
+
+.main__pinned {
+  grid-column: 2/7;
+}
+
+.main__pinned2 {
+  display: grid;
+  grid-template-areas: "medium1 medium1 medium1 small1 small1 small2 small2" "medium1 medium1 medium1 small3 small3 small4 small4";
+}
+
+.main__pinned__picture--medium {
+  grid-area: medium1;
+  background-color: antiquewhite;
+}
+
+.main__pinned__picture--small1 {
+  grid-area: small1;
+  background-color: blue;
+}
+
+.main__pinned__picture--small2 {
+  grid-area: small2;
+  background-color: yellow;
+}
+
+.main__pinned__picture--small3 {
+  grid-area: small3;
+  background-color: purple;
+}
+
+.main__pinned__picture--small4 {
+  grid-area: small4;
+  background-color: pink;
 }
 
 /*# sourceMappingURL=styles.css.map */
