@@ -7,6 +7,16 @@
     }
 }
 
+.picture-frame-large {
+    border-radius: 10px;
+    display: table;
+    padding: 1em;
+    height: 13em;
+    &:hover {
+        transform: translateY(-3px);
+    }
+}
+
 .picture-frame-small {
     border-radius: 10px;
     padding: 1em;
@@ -44,15 +54,14 @@
 }
 
 .feature-button-light-filled {
-    height: 1em;
-    border-radius: 10px;
+    height: 1.6em;
+    border-radius: 15px;
     border-color: white;
     color: white;
     padding-top: 2px;
     padding-bottom: 2px;
     padding-left: 5px;
     padding-right: 5px;
-    color: transparent;
     &:hover {
         background-color: white;
         color: black;

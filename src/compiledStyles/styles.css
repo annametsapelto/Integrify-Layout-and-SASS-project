@@ -19,7 +19,7 @@
 }
 
 .sticky-header__logo {
-  height: 0.8em;
+  height: 0.7em;
   padding: 0.5em;
   background-color: rgb(29, 28, 28);
   margin-right: 80%;
@@ -89,6 +89,16 @@
   transform: translateY(-3px);
 }
 
+.picture-frame-large, .main__large-pictures__pic3, .main__large-pictures__pic2, .main__large-pictures__pic1 {
+  border-radius: 10px;
+  display: table;
+  padding: 1em;
+  height: 13em;
+}
+.picture-frame-large:hover, .main__large-pictures__pic3:hover, .main__large-pictures__pic2:hover, .main__large-pictures__pic1:hover {
+  transform: translateY(-3px);
+}
+
 .picture-frame-small, .main__pinned__pic--small4, .main__pinned__pic--small3, .main__pinned__pic--small2, .main__pinned__pic--small1 {
   border-radius: 10px;
   padding: 1em;
@@ -125,18 +135,17 @@
   color: white;
 }
 
-.feature-button-light-filled {
-  height: 1em;
-  border-radius: 10px;
+.feature-button-light-filled, .main__large-pictures__pic3 button, .main__large-pictures__pic2 button, .main__large-pictures__pic1 button {
+  height: 1.6em;
+  border-radius: 15px;
   border-color: white;
   color: white;
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 5px;
   padding-right: 5px;
-  color: transparent;
 }
-.feature-button-light-filled:hover {
+.feature-button-light-filled:hover, .main__large-pictures__pic3 button:hover, .main__large-pictures__pic2 button:hover, .main__large-pictures__pic1 button:hover {
   background-color: white;
   color: black;
 }
@@ -161,10 +170,13 @@ main {
   grid-template-areas: "aside content content content content content content .";
 }
 
+.main__content {
+  grid-area: content;
+}
+
 .main__aside {
   color: white;
   transform: rotate(-90deg);
-  grid-column: 1/2;
   grid-area: aside;
   position: fixed;
   left: -5em;
@@ -172,8 +184,9 @@ main {
 }
 
 .main__pinned {
-  grid-area: content;
   color: white;
+  margin-left: 7em;
+  margin-right: 7em;
   margin-bottom: 3em;
 }
 
@@ -210,6 +223,81 @@ main {
 
 .main__pinned button {
   margin: 1em;
+}
+
+.main__large-pictures {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10em;
+  margin-right: 10em;
+}
+
+.main__large-pictures__pic1 {
+  margin-bottom: 5em;
+  color: white;
+  background-image: url("../images/leaves.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.main__large-pictures__pic1 h2 {
+  color: white;
+}
+.main__large-pictures__pic1 button {
+  margin: 0.3em;
+}
+
+.main__large-pictures__pic2 {
+  margin-bottom: 5em;
+  color: white;
+  background-image: url("../images/leaves.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.main__large-pictures__pic2 h2 {
+  color: white;
+}
+.main__large-pictures__pic2 button {
+  margin: 0.3em;
+}
+
+.main__large-pictures__pic3 {
+  margin-bottom: 5em;
+  color: white;
+  background-image: url("../images/leaves.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.main__large-pictures__pic3 h2 {
+  color: white;
+}
+.main__large-pictures__pic3 button {
+  margin: 0.3em;
+}
+
+.main__see-more {
+  margin-bottom: 3em;
+  color: white;
+  text-align: center;
+}
+
+.main__articles {
+  display: grid;
+}
+
+.main__articles__load-button {
+  justify-self: center;
+  width: 50%;
+  background-color: rgb(41, 40, 40);
+  color: white;
+  border-style: none;
+  padding: 1em;
+  border-radius: 8px;
+}
+.main__articles__load-button:hover {
+  width: 52%;
+  cursor: pointer;
+  background-color: rgb(207, 163, 81);
+  color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */

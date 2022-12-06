@@ -5,10 +5,13 @@ main {
     grid-template-areas: 'aside content content content content content content .';
 }
 
+.main__content {
+    grid-area: content;
+}
+
 .main__aside {
     color: white;
     transform: rotate(-90deg);
-    grid-column: 1/2;
     grid-area: aside;
     position: fixed;
     left: -5em;
@@ -16,8 +19,9 @@ main {
 }
 
 .main__pinned {
-    grid-area: content;
     color: white;
+    margin-left: 7em;
+    margin-right: 7em;
     margin-bottom: 3em;
 }
 
@@ -62,4 +66,85 @@ main {
 .main__pinned button {
     @extend .feature-button-light;
     margin: 1em;
+}
+
+.main__large-pictures {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+.main__large-pictures__pic1 {
+    @extend .picture-frame-large;
+    margin-bottom: 5em;
+    color: white;
+    background-image: url("../images/leaves.jpg");
+    background-position: center;
+    background-size: cover;
+    h2 {
+        color: white;
+    }
+    button {
+        @extend .feature-button-light-filled;
+        margin: 0.3em
+    }
+}
+
+.main__large-pictures__pic2 {
+    @extend .picture-frame-large;
+    margin-bottom: 5em;
+    color: white;
+    background-image: url("../images/leaves.jpg");
+    background-position: center;
+    background-size: cover;
+    h2 {
+        color: white;
+    }
+    button {
+        @extend .feature-button-light-filled;
+        margin: 0.3em;
+    }
+}
+
+.main__large-pictures__pic3 {
+    @extend .picture-frame-large;
+    margin-bottom: 5em;
+    color: white;
+    background-image: url("../images/leaves.jpg");
+    background-position: center;
+    background-size: cover;
+    h2 {
+        color: white;
+    }
+    button {
+        @extend .feature-button-light-filled;
+        margin: 0.3em
+    }
+}
+
+.main__see-more {
+    margin-bottom: 3em;
+    color: white;
+    text-align: center;
+}
+
+.main__articles {
+    display: grid;
+}
+
+.main__articles__load-button {
+    justify-self: center;
+    width: 50%;
+    background-color: rgb(41, 40, 40);
+    color: white;
+    border-style: none;
+    padding: 1em;
+    border-radius: 8px;
+    &:hover {
+        width: 52%;
+        cursor: pointer;
+        background-color: rgb(207, 163, 81);
+        color: black;
+    }
 }
