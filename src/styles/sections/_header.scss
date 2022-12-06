@@ -35,3 +35,19 @@
     height: 2px;
     background-color: black;
 }
+
+.main-header__headline {
+    color:white;
+}
+
+.main-header__nav-line {
+    float:right;
+}
+.main-header__nav a {
+    text-decoration: none;
+    color: white;
+}
+.main-header__search-icon img {
+    height: 1em;
+    float:right;
+}
