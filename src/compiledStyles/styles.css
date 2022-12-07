@@ -83,12 +83,20 @@ body {
   float: right;
 }
 
+@font-face {
+  font-family: Corben;
+  src: url("...../fonts/Corben-Bold.ttf");
+}
 .picture-frame, .main__pinned__pic--medium {
   border-radius: 10px;
   padding: 1em;
 }
 .picture-frame:hover, .main__pinned__pic--medium:hover {
   transform: translateY(-3px);
+}
+.picture-frame h2, .main__pinned__pic--medium h2 {
+  font-family: Corben, system-ui;
+  font-weight: 700;
 }
 
 .picture-frame-large, .main__large-pictures__pic3, .main__large-pictures__pic2, .main__large-pictures__pic1 {
