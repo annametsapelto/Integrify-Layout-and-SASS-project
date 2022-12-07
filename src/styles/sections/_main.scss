@@ -36,9 +36,18 @@ main {
 .main__pinned__pic--medium {
     @extend .picture-frame;
     grid-area: medium1;
+    background-color: rgb(163, 104, 55);
     background-position: center;
     background-size: cover;
     background-image: url(../images/living-room.jpg);
+    background-blend-mode: multiply; 
+}
+
+.main__pinned__pic--medium__texts {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 10em;
 }
 
 .main__pinned__pic--small1 {

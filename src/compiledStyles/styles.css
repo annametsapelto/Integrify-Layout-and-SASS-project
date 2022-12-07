@@ -120,9 +120,10 @@ body {
   padding: 1em;
   background-position: center;
   background-size: cover;
+  transition: transform 0.5s;
 }
 .picture-frame-article:hover, .main__articles__article5:hover, .main__articles__article4:hover, .main__articles__article3:hover, .main__articles__article2:hover, .main__articles__article1:hover {
-  transform: translateY(-3px);
+  transform: scale(1.05);
 }
 .picture-frame-article h2, .main__articles__article5 h2, .main__articles__article4 h2, .main__articles__article3 h2, .main__articles__article2 h2, .main__articles__article1 h2 {
   font-family: Corben, system-ui;
@@ -237,9 +238,18 @@ main {
 
 .main__pinned__pic--medium {
   grid-area: medium1;
+  background-color: rgb(163, 104, 55);
   background-position: center;
   background-size: cover;
   background-image: url(../images/living-room.jpg);
+  background-blend-mode: multiply;
+}
+
+.main__pinned__pic--medium__texts {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 10em;
 }
 
 .main__pinned__pic--small1 {

@@ -36,8 +36,9 @@
     padding: 1em;
     background-position: center;
     background-size: cover;
+    transition: transform 0.5s;
     &:hover {
-        transform: translateY(-3px);
+        transform: scale(1.05);
     }
     h2 {
         font-family: Corben, system-ui;
