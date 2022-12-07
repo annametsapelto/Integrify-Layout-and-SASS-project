@@ -12,4 +12,13 @@
     background-color: rgb(131, 196, 35);
     border-radius: 10px;
     padding: 10px;
+    &:hover {
+        transform: translateY(3px);
+        cursor: pointer;
+    }
+}
+
+.footer__rights-text {
+    font-size: xx-small;
+    color:white;
 }
