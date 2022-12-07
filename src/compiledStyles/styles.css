@@ -491,17 +491,45 @@ main {
 .footer__see-all-button {
   border: none;
   background-color: rgb(131, 196, 35);
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 10px;
+  margin: 0 auto;
+  margin-right: 1em;
+  width: 12em;
+  text-align: left;
+  font-size: larger;
+  justify-self: flex-end;
+  background-image: url(../images/arrow.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 30%;
 }
 .footer__see-all-button:hover {
   transform: translateY(-3px);
   cursor: pointer;
 }
 
+.footer__row {
+  display: flex;
+  width: 100vwmax;
+  margin-left: 15em;
+}
+
+.footer__row img {
+  width: 1em;
+}
+
+.footer__images {
+  margin-left: 10em;
+}
+
 .footer__rights-text {
   font-size: xx-small;
   color: white;
+}
+
+.footer__rights {
+  margin-left: 15em;
 }
 
 /*# sourceMappingURL=styles.css.map */
