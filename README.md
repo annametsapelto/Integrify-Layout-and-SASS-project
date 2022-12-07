@@ -52,3 +52,5 @@ SASS
 ## Getting started
 
 The project repository can be cloned from Github using command git clone .
+
+The page is live at https://annametsapelto.github.io/Integrify-Layout-and-SASS-project/
