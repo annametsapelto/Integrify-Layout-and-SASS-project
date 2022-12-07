@@ -391,12 +391,21 @@ main {
   padding: 1em;
   border-radius: 8px;
   margin-bottom: 10em;
+  justify-self: center;
 }
 .main__subscribe__submit:hover {
   width: 9em;
   cursor: pointer;
   background-color: rgb(207, 163, 81);
   color: black;
+}
+
+.footer__nav a {
+  text-decoration: none;
+  color: white;
+}
+.footer__nav a:hover {
+  color: aqua;
 }
 
 /*# sourceMappingURL=styles.css.map */
