@@ -355,12 +355,32 @@ main {
   display: flex;
   flex-direction: column;
   justify-items: center;
+  width: 50%;
+  margin-left: 20%;
 }
 
 .main__subscribe__form {
   display: flex;
   flex-direction: column;
   justify-items: center;
+}
+
+.main__subscribe h2 {
+  margin-bottom: 1em;
+}
+
+.main__subscribe__typed-text {
+  margin-bottom: 3em;
+}
+
+.main__subscribe__placeholder {
+  color: grey;
+  text-align: center;
+  padding: 10px;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid white;
+  margin-bottom: 3em;
 }
 
 .main__subscribe__submit {
@@ -370,6 +390,7 @@ main {
   border-style: none;
   padding: 1em;
   border-radius: 8px;
+  margin-bottom: 10em;
 }
 .main__subscribe__submit:hover {
   width: 9em;
