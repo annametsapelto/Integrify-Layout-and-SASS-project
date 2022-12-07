@@ -1,8 +1,11 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: system-ui;
+}
+
+body {
   background-color: rgb(27, 23, 34);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .sticky-header--gatherer {
@@ -403,9 +406,26 @@ main {
 .footer__nav a {
   text-decoration: none;
   color: white;
+  font-size: x-small;
 }
 .footer__nav a:hover {
   color: aqua;
+}
+
+.footer__see-all-button {
+  border: none;
+  background-color: rgb(131, 196, 35);
+  border-radius: 10px;
+  padding: 10px;
+}
+.footer__see-all-button:hover {
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+.footer__rights-text {
+  font-size: xx-small;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */
