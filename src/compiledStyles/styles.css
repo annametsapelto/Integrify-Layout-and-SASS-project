@@ -85,7 +85,7 @@ body {
 
 @font-face {
   font-family: Corben;
-  src: url("...../fonts/Corben-Bold.ttf");
+  src: url("../fonts/Corben-Bold.ttf");
 }
 .picture-frame, .main__pinned__pic--medium {
   border-radius: 10px;
@@ -103,23 +103,38 @@ body {
   border-radius: 10px;
   padding: 1em;
   height: 13em;
+  background-position: center;
+  background-size: cover;
 }
 .picture-frame-large:hover, .main__large-pictures__pic3:hover, .main__large-pictures__pic2:hover, .main__large-pictures__pic1:hover {
   transform: translateY(-3px);
+}
+.picture-frame-large h2, .main__large-pictures__pic3 h2, .main__large-pictures__pic2 h2, .main__large-pictures__pic1 h2 {
+  font-family: Corben, system-ui;
+  font-weight: 700;
 }
 
 .picture-frame-article, .main__articles__article5, .main__articles__article4, .main__articles__article3, .main__articles__article2, .main__articles__article1 {
   border-radius: 10px;
   height: 13em;
   padding: 1em;
+  background-position: center;
+  background-size: cover;
 }
 .picture-frame-article:hover, .main__articles__article5:hover, .main__articles__article4:hover, .main__articles__article3:hover, .main__articles__article2:hover, .main__articles__article1:hover {
   transform: translateY(-3px);
+}
+.picture-frame-article h2, .main__articles__article5 h2, .main__articles__article4 h2, .main__articles__article3 h2, .main__articles__article2 h2, .main__articles__article1 h2 {
+  font-family: Corben, system-ui;
+  font-weight: 700;
+  font-size: large;
 }
 
 .picture-frame-small, .main__pinned__pic--small4, .main__pinned__pic--small3, .main__pinned__pic--small2, .main__pinned__pic--small1 {
   border-radius: 10px;
   padding: 1em;
+  background-position: center;
+  background-size: cover;
 }
 .picture-frame-small h2, .main__pinned__pic--small4 h2, .main__pinned__pic--small3 h2, .main__pinned__pic--small2 h2, .main__pinned__pic--small1 h2 {
   font-size: medium;
@@ -127,6 +142,10 @@ body {
 }
 .picture-frame-small:hover, .main__pinned__pic--small4:hover, .main__pinned__pic--small3:hover, .main__pinned__pic--small2:hover, .main__pinned__pic--small1:hover {
   transform: translateY(-3px);
+}
+.picture-frame-small h2, .main__pinned__pic--small4 h2, .main__pinned__pic--small3 h2, .main__pinned__pic--small2 h2, .main__pinned__pic--small1 h2 {
+  font-family: Corben, system-ui;
+  font-weight: 700;
 }
 
 .feature-button-light, .main__pinned button {
@@ -141,12 +160,12 @@ body {
   color: black;
 }
 
-.feature-button-dark {
-  height: 1em;
+.feature-button-dark, .main__pinned__button--dark {
+  height: 1.5em;
   border-radius: 10px;
   border-style: none;
   padding-top: 2px;
-  padding-bottom: 2px;
+  padding-bottom: 3px;
   padding-left: 5px;
   padding-right: 5px;
   background-color: rgb(27, 23, 34);
@@ -218,30 +237,43 @@ main {
 
 .main__pinned__pic--medium {
   grid-area: medium1;
-  background-color: rgb(124, 96, 58);
+  background-position: center;
+  background-size: cover;
+  background-image: url(../images/living-room.jpg);
 }
 
 .main__pinned__pic--small1 {
   grid-area: small1;
   background-color: blue;
+  background-blend-mode: multiply;
+  background-image: url(../images/open-book.jpg);
 }
 
 .main__pinned__pic--small2 {
   grid-area: small2;
-  background-color: yellow;
+  color: black;
+  background-color: rgb(201, 160, 25);
 }
 
 .main__pinned__pic--small3 {
   grid-area: small3;
   background-color: purple;
+  background-blend-mode: multiply;
+  background-image: url(../images/book-stack.jpg);
 }
 
 .main__pinned__pic--small4 {
   grid-area: small4;
-  background-color: pink;
+  background-color: rgb(223, 141, 154);
+  background-blend-mode: hard-light;
+  background-image: url(../images/leaves.jpg);
 }
 
 .main__pinned button {
+  margin: 1em;
+}
+
+.main__pinned__button--dark {
   margin: 1em;
 }
 
@@ -256,8 +288,6 @@ main {
   margin-bottom: 5em;
   color: white;
   background-image: url("../images/leaves.jpg");
-  background-position: center;
-  background-size: cover;
 }
 .main__large-pictures__pic1 h2 {
   color: white;
@@ -268,13 +298,10 @@ main {
 
 .main__large-pictures__pic2 {
   margin-bottom: 5em;
-  color: white;
-  background-image: url("../images/leaves.jpg");
-  background-position: center;
-  background-size: cover;
-}
-.main__large-pictures__pic2 h2 {
-  color: white;
+  color: black;
+  background-color: rgb(192, 192, 51);
+  background-image: url("../images/meadow.jpg");
+  background-blend-mode: darken;
 }
 .main__large-pictures__pic2 button {
   margin: 0.3em;
@@ -283,9 +310,9 @@ main {
 .main__large-pictures__pic3 {
   margin-bottom: 5em;
   color: white;
-  background-image: url("../images/leaves.jpg");
-  background-position: center;
-  background-size: cover;
+  background-color: rgb(56, 56, 187);
+  background-image: url("../images/sea.jpg");
+  background-blend-mode: luminosity;
 }
 .main__large-pictures__pic3 h2 {
   color: white;
@@ -305,42 +332,43 @@ main {
   margin-right: 9em;
   display: grid;
   grid-gap: 1em;
+  margin-bottom: 5em;
   grid-template-areas: "art1 art1 art1 art2 art2 art2" "art3 art3 art4 art4 art5 art5" "load-button load-button load-button load-button load-button load-button";
 }
 
 .main__articles__article1 {
   grid-area: art1;
-  background-image: url("../images/leaves.jpg");
-  background-position: center;
-  background-size: cover;
+  background-color: rgb(151, 88, 46);
+  background-image: url("../images/open-book.jpg");
+  background-blend-mode: hard-light;
   color: white;
 }
 .main__articles__article2 {
   grid-area: art2;
+  background-color: orangered;
   background-image: url("../images/leaves.jpg");
-  background-position: center;
-  background-size: cover;
+  background-blend-mode: luminosity;
   color: white;
 }
 .main__articles__article3 {
   grid-area: art3;
-  background-image: url("../images/leaves.jpg");
-  background-position: center;
-  background-size: cover;
+  background-color: rgb(110, 41, 160);
+  background-image: url("../images/living-room.jpg");
+  background-blend-mode: color-burn;
   color: white;
 }
 .main__articles__article4 {
   grid-area: art4;
-  background-image: url("../images/leaves.jpg");
-  background-position: center;
-  background-size: cover;
+  background-color: green;
+  background-image: url("../images/meadow.jpg");
+  background-blend-mode: hard-light;
   color: white;
 }
 .main__articles__article5 {
   grid-area: art5;
-  background-image: url("../images/leaves.jpg");
-  background-position: center;
-  background-size: cover;
+  background-color: rgb(30, 172, 172);
+  background-image: url("../images/book-stack.jpg");
+  background-blend-mode: hard-light;
   color: white;
 }
 .main__articles__load-button {
@@ -351,6 +379,7 @@ main {
   color: white;
   border-style: none;
   padding: 1em;
+  margin-top: 3em;
   border-radius: 8px;
 }
 .main__articles__load-button:hover {
@@ -381,6 +410,15 @@ main {
   margin-bottom: 1em;
 }
 
+.main__subscribe__typed-container {
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
 .main__subscribe__typed-text {
   margin-bottom: 3em;
   border-right: 0.15em solid white;
@@ -395,10 +433,10 @@ main {
     width: 0%;
   }
   25% {
-    width: 40%;
+    width: 100%;
   }
   75% {
-    width: 40%;
+    width: 100%;
   }
   100% {
     width: 0%;
@@ -430,6 +468,7 @@ main {
   border-style: none;
   padding: 1em;
   border-radius: 8px;
+  margin: 0 auto;
   margin-bottom: 10em;
   justify-self: center;
 }

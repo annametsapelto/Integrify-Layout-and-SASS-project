@@ -36,35 +36,49 @@ main {
 .main__pinned__pic--medium {
     @extend .picture-frame;
     grid-area: medium1;
-    background-color: rgb(124, 96, 58);
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/living-room.jpg);
 }
 
 .main__pinned__pic--small1 {
     @extend .picture-frame-small;
     grid-area: small1;
     background-color: blue;
+    background-blend-mode: multiply;
+    background-image: url(../images/open-book.jpg);
 }
 
 .main__pinned__pic--small2 {
     @extend .picture-frame-small;
     grid-area: small2;
-    background-color: yellow;
+    color:black;
+    background-color: rgb(201, 160, 25);
 }
 
 .main__pinned__pic--small3 {
     @extend .picture-frame-small;
     grid-area: small3;
     background-color: purple;
+    background-blend-mode: multiply;
+    background-image: url(../images/book-stack.jpg);
 }
 
 .main__pinned__pic--small4 {
     @extend .picture-frame-small;
     grid-area: small4;
-    background-color: pink;
+    background-color: rgb(223, 141, 154);
+    background-blend-mode: hard-light;
+    background-image: url(../images/leaves.jpg);
 }
 
 .main__pinned button {
     @extend .feature-button-light;
+    margin: 1em;
+}
+
+.main__pinned__button--dark {
+    @extend .feature-button-dark;
     margin: 1em;
 }
 
@@ -80,8 +94,6 @@ main {
     margin-bottom: 5em;
     color: white;
     background-image: url("../images/leaves.jpg");
-    background-position: center;
-    background-size: cover;
     h2 {
         color: white;
     }
@@ -94,13 +106,10 @@ main {
 .main__large-pictures__pic2 {
     @extend .picture-frame-large;
     margin-bottom: 5em;
-    color: white;
-    background-image: url("../images/leaves.jpg");
-    background-position: center;
-    background-size: cover;
-    h2 {
-        color: white;
-    }
+    color: black;
+    background-color: rgb(192, 192, 51);
+    background-image: url("../images/meadow.jpg");
+    background-blend-mode: darken;
     button {
         @extend .feature-button-light-filled;
         margin: 0.3em;
@@ -111,9 +120,9 @@ main {
     @extend .picture-frame-large;
     margin-bottom: 5em;
     color: white;
-    background-image: url("../images/leaves.jpg");
-    background-position: center;
-    background-size: cover;
+    background-color: rgb(56, 56, 187);
+    background-image: url("../images/sea.jpg");
+    background-blend-mode: luminosity;
     h2 {
         color: white;
     }
@@ -134,6 +143,7 @@ main {
     margin-right: 9em;
     display: grid;
     grid-gap: 1em;
+    margin-bottom: 5em;
     grid-template-areas: 'art1 art1 art1 art2 art2 art2'
     'art3 art3 art4 art4 art5 art5'
     'load-button load-button load-button load-button load-button load-button';
@@ -142,9 +152,9 @@ main {
 .main__articles__article1 {
     @extend .picture-frame-article;
     grid-area: art1;
-    background-image: url("../images/leaves.jpg");
-    background-position: center;
-    background-size: cover;
+    background-color: rgb(151, 88, 46);
+    background-image: url("../images/open-book.jpg");
+    background-blend-mode: hard-light;
     color: white;
     button {
         @extend .feature-button-light-filled;
@@ -153,9 +163,9 @@ main {
 .main__articles__article2 {
     @extend .picture-frame-article;
     grid-area: art2;
+    background-color: orangered;
     background-image: url("../images/leaves.jpg");
-    background-position: center;
-    background-size: cover;
+    background-blend-mode: luminosity;
     color: white;
     button {
         @extend .feature-button-light-filled;
@@ -165,9 +175,9 @@ main {
 .main__articles__article3 {
     @extend .picture-frame-article;
     grid-area: art3;
-    background-image: url("../images/leaves.jpg");
-    background-position: center;
-    background-size: cover;
+    background-color: rgb(110, 41, 160);
+    background-image: url("../images/living-room.jpg");
+    background-blend-mode: color-burn;
     color: white;
     button {
         @extend .feature-button-light-filled;
@@ -177,9 +187,9 @@ main {
 .main__articles__article4 {
     @extend .picture-frame-article;
     grid-area: art4;
-    background-image: url("../images/leaves.jpg");
-    background-position: center;
-    background-size: cover;
+    background-color: green;
+    background-image: url("../images/meadow.jpg");
+    background-blend-mode: hard-light;
     color: white;
     button {
         @extend .feature-button-light-filled;
@@ -189,9 +199,9 @@ main {
 .main__articles__article5 {
     @extend .picture-frame-article;
     grid-area: art5;
-    background-image: url("../images/leaves.jpg");
-    background-position: center;
-    background-size: cover;
+    background-color: rgb(30, 172, 172);
+    background-image: url("../images/book-stack.jpg");
+    background-blend-mode: hard-light;
     color: white;
     button {
         @extend .feature-button-light-filled;
@@ -206,6 +216,7 @@ main {
     color: white;
     border-style: none;
     padding: 1em;
+    margin-top: 3em;
     border-radius: 8px;
     &:hover {
         width: 52%;
@@ -236,6 +247,15 @@ main {
     margin-bottom: 1em;
 }
 
+.main__subscribe__typed-container {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
 .main__subscribe__typed-text {
     margin-bottom: 3em;
     border-right: 0.15em solid white;
@@ -248,8 +268,8 @@ main {
 
 @keyframes typing {
     0% {width: 0%}
-    25% {width: 40%}
-    75% {width: 40%}
+    25% {width: 100%}
+    75% {width: 100%}
     100% {width: 0%}
 } 
 
@@ -276,6 +296,7 @@ main {
     border-style: none;
     padding: 1em;
     border-radius: 8px;
+    margin: 0 auto;
     margin-bottom: 10em;
     justify-self: center;
     &:hover {
